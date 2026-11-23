@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "name": "采购订单",
+  "page": {
+    "widthMm": 210,
+    "heightMm": 297,
+    "marginLeftMm": 12,
+    "marginTopMm": 12,
+    "marginRightMm": 12,
+    "marginBottomMm": 12
+  },
+  "bands": [
+    {
+      "type": "pageHeader",
+      "name": "页眉",
+      "heightMm": 30,
+      "components": [
+        {
+          "type": "text",
+          "xMm": 0,
+          "yMm": 0,
+          "widthMm": 55,
+          "heightMm": 9,
+          "text": "多软商贸有限公司",
+          "font": { "family": "HarmonyOS Sans SC", "sizePt": 15, "bold": true, "colorHex": "#111827" }
+        },
+        {
+          "type": "text",
+          "xMm": 55,
+          "yMm": 0,
+          "widthMm": 76,
+          "heightMm": 10,
+          "text": "采 购 订 单",
+          "font": { "family": "HarmonyOS Sans SC", "sizePt": 18, "bold": true, "colorHex": "#111827" },
+          "horizontalAlignment": "center",
+          "verticalAlignment": "middle"
+        },
+        {
+          "type": "text",
+          "xMm": 0,
+          "yMm": 11,
+          "widthMm": 90,
+          "heightMm": 6,
+          "text": "单号：{单据头.订单编号}"
+        },
+        {
+          "type": "text",
+          "xMm": 96,
+          "yMm": 11,
+          "widthMm": 90,
+          "heightMm": 6,
+          "text": "日期：{单据头.订单日期:yyyy-MM-dd}",
+          "horizontalAlignment": "right"
+        },
+        {
+          "type": "text",
+          "xMm": 0,
+          "yMm": 17,
+          "widthMm": 120,
+          "heightMm": 6,
+          "text": "供应商：{单据头.供应商}"
+        },
+        {
+          "type": "text",
+          "xMm": 96,
+          "yMm": 17,
+          "widthMm": 90,
+          "heightMm": 6,
+          "text": "采购员：{单据头.采购员}",
+          "horizontalAlignment": "right"
+        },
+        {
+          "type": "text",
+          "xMm": 0,
+          "yMm": 23,
+          "widthMm": 90,
+          "heightMm": 6,
+          "text": "仓库：{单据头.仓库}"
+        },
+        {
+          "type": "line",
+          "xMm": 0,
+          "yMm": 29,
+          "widthMm": 0,
+          "heightMm": 0,
+          "thicknessMm": 0.4,
+          "colorHex": "#111827"
+        }
+      ]
+    },
+    {
+      "type": "columnHeader",
+      "name": "列标题",
+      "heightMm": 7,
+      "components": [
+        { "type": "rect", "xMm": 0, "yMm": 0, "widthMm": 10, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 10, "yMm": 0, "widthMm": 22, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 32, "yMm": 0, "widthMm": 36, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 68, "yMm": 0, "widthMm": 32, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 100, "yMm": 0, "widthMm": 10, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 110, "yMm": 0, "widthMm": 14, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 124, "yMm": 0, "widthMm": 18, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "rect", "xMm": 166, "yMm": 0, "widthMm": 20, "heightMm": 7, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "text", "xMm": 0, "yMm": 0, "widthMm": 10, "heightMm": 7, "text": "序号", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 10, "yMm": 0, "widthMm": 22, "heightMm": 7, "text": "物料编码", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 32, "yMm": 0, "widthMm": 36, "heightMm": 7, "text": "物料名称", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 68, "yMm": 0, "widthMm": 32, "heightMm": 7, "text": "规格型号", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 100, "yMm": 0, "widthMm": 10, "heightMm": 7, "text": "单位", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 110, "yMm": 0, "widthMm": 14, "heightMm": 7, "text": "数量", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 124, "yMm": 0, "widthMm": 18, "heightMm": 7, "text": "单价", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 7, "text": "金额", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 166, "yMm": 0, "widthMm": 20, "heightMm": 7, "text": "交期", "font": { "sizePt": 8.5, "bold": true }, "horizontalAlignment": "center", "verticalAlignment": "middle" }
+      ]
+    },
+    {
+      "type": "data",
+      "name": "明细",
+      "dataSource": "明细数据",
+      "heightMm": 7,
+      "components": [
+        { "type": "rect", "xMm": 0, "yMm": 0, "widthMm": 10, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 10, "yMm": 0, "widthMm": 22, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 32, "yMm": 0, "widthMm": 36, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 68, "yMm": 0, "widthMm": 32, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 100, "yMm": 0, "widthMm": 10, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 110, "yMm": 0, "widthMm": 14, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 124, "yMm": 0, "widthMm": 18, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "rect", "xMm": 166, "yMm": 0, "widthMm": 20, "heightMm": 7, "borderColorHex": "#C7CBD1" },
+        { "type": "text", "xMm": 0, "yMm": 0, "widthMm": 10, "heightMm": 7, "text": "{序号}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 10, "yMm": 0, "widthMm": 22, "heightMm": 7, "text": "{物料编码}", "font": { "sizePt": 8.5 }, "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 32, "yMm": 0, "widthMm": 36, "heightMm": 7, "text": "{物料名称}", "font": { "sizePt": 8.5 }, "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 68, "yMm": 0, "widthMm": 32, "heightMm": 7, "text": "{规格型号}", "font": { "sizePt": 8.5 }, "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 100, "yMm": 0, "widthMm": 10, "heightMm": 7, "text": "{单位}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "center", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 110, "yMm": 0, "widthMm": 14, "heightMm": 7, "text": "{数量}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 124, "yMm": 0, "widthMm": 18, "heightMm": 7, "text": "{单价:N2}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 7, "text": "{金额:N2}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 166, "yMm": 0, "widthMm": 20, "heightMm": 7, "text": "{交期:yyyy-MM-dd}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "center", "verticalAlignment": "middle" }
+      ]
+    },
+    {
+      "type": "reportSummary",
+      "name": "合计",
+      "heightMm": 19,
+      "components": [
+        { "type": "rect", "xMm": 0, "yMm": 0, "widthMm": 186, "heightMm": 11, "fillColorHex": "#F7F8FA", "borderColorHex": "#9CA3AF" },
+        { "type": "text", "xMm": 110, "yMm": 0, "widthMm": 32, "heightMm": 11, "text": "合  计", "font": { "sizePt": 9, "bold": true }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 11, "text": "{FORMAT(SUM(明细数据.金额), 'N2')}", "font": { "sizePt": 9, "bold": true }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 0, "yMm": 12, "widthMm": 186, "heightMm": 6, "text": "备注：{单据头.备注}", "font": { "sizePt": 9, "colorHex": "#4B5563" } }
+      ]
+    },
+    {
+      "type": "pageFooter",
+      "name": "页脚",
+      "heightMm": 10,
+      "components": [
+        { "type": "line", "xMm": 0, "yMm": 0, "widthMm": 0, "heightMm": 0, "thicknessMm": 0.2, "colorHex": "#9CA3AF" },
+        { "type": "text", "xMm": 0, "yMm": 2, "widthMm": 186, "heightMm": 6, "text": "第 {PageNumber} 页 / 共 {TotalPages} 页", "font": { "sizePt": 8, "colorHex": "#6B7280" }, "horizontalAlignment": "center" }
+      ]
+    }
+  ]
+}
