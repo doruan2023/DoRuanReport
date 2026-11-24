@@ -114,6 +114,18 @@
       ]
     },
     {
+      "type": "groupHeader",
+      "name": "分组头",
+      "dataSource": "明细数据",
+      "groupBy": "分类",
+      "heightMm": 8,
+      "components": [
+        { "type": "rect", "xMm": 0, "yMm": 0, "widthMm": 186, "heightMm": 8, "fillColorHex": "#EEF2F7", "borderColorHex": "#9CA3AF" },
+        { "type": "text", "xMm": 2, "yMm": 0, "widthMm": 110, "heightMm": 8, "text": "分类：{分类}", "font": { "sizePt": 9, "bold": true, "colorHex": "#1F2937" }, "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 120, "yMm": 0, "widthMm": 64, "heightMm": 8, "text": "共 {COUNT(明细数据.物料编码)} 项", "font": { "sizePt": 8.5, "colorHex": "#4B5563" }, "horizontalAlignment": "right", "verticalAlignment": "middle" }
+      ]
+    },
+    {
       "type": "data",
       "name": "明细",
       "dataSource": "明细数据",
@@ -137,6 +149,17 @@
         { "type": "text", "xMm": 124, "yMm": 0, "widthMm": 18, "heightMm": 7, "text": "{单价:N2}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
         { "type": "text", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 7, "text": "{金额:N2}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
         { "type": "text", "xMm": 166, "yMm": 0, "widthMm": 20, "heightMm": 7, "text": "{交期:yyyy-MM-dd}", "font": { "sizePt": 8.5 }, "horizontalAlignment": "center", "verticalAlignment": "middle" }
+      ]
+    },
+    {
+      "type": "groupFooter",
+      "name": "分组小计",
+      "dataSource": "明细数据",
+      "heightMm": 7,
+      "components": [
+        { "type": "rect", "xMm": 0, "yMm": 0, "widthMm": 186, "heightMm": 7, "fillColorHex": "#F7F8FA", "borderColorHex": "#C7CBD1" },
+        { "type": "text", "xMm": 110, "yMm": 0, "widthMm": 32, "heightMm": 7, "text": "本类小计", "font": { "sizePt": 8.5, "bold": true, "colorHex": "#374151" }, "horizontalAlignment": "right", "verticalAlignment": "middle" },
+        { "type": "text", "xMm": 142, "yMm": 0, "widthMm": 24, "heightMm": 7, "text": "{FORMAT(SUM(明细数据.金额), 'N2')}", "font": { "sizePt": 8.5, "bold": true, "colorHex": "#111827" }, "horizontalAlignment": "right", "verticalAlignment": "middle" }
       ]
     },
     {
